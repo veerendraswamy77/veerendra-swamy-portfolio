@@ -12,6 +12,15 @@ const navItems = [
   { label: "Contact", href: "#contact" }
 ];
 
+const downloadResume = () => {
+  const link = document.createElement('a');
+  link.href = '/resume.pdf';
+  link.download = 'S_Veerendra_Swamy_Resume.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -62,6 +71,7 @@ export function Navigation() {
             <Button
               variant="outline"
               size="sm"
+              onClick={downloadResume}
               className="hidden sm:flex items-center gap-2 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
             >
               <Download size={16} />
@@ -97,6 +107,7 @@ export function Navigation() {
               <Button
                 variant="outline"
                 size="sm"
+                onClick={downloadResume}
                 className="w-full flex items-center justify-center gap-2 mt-4"
               >
                 <Download size={16} />

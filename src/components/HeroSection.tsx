@@ -17,6 +17,15 @@ export function HeroSection() {
     }
   };
 
+  const downloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/resume.pdf';
+    link.download = 'S_Veerendra_Swamy_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background */}
@@ -66,6 +75,7 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
             <Button
               size="lg"
+              onClick={downloadResume}
               className="bg-white/20 backdrop-blur-sm border-white/30 text-white hover:bg-white/30 hover:scale-105 transition-all duration-300 shadow-glow"
             >
               <Download className="mr-2 h-5 w-5" />
