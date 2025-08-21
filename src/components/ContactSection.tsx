@@ -67,33 +67,16 @@ export function ContactSection() {
     e.preventDefault();
     setIsSubmitting(true);
 
+    // Simulate form submission
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          access_key: "a3198d64-5bf7-4499-82e7-f0be0cda8cbb",
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-          from_name: "Portfolio Contact Form",
-          subject: `New message from ${formData.name}`,
-        }),
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for your message. I'll get back to you soon!",
       });
-
-      const result = await response.json();
-
-      if (result.success) {
-        toast({
-          title: "Message Sent!",
-          description: "Thank you for your message. I'll get back to you soon!",
-        });
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        throw new Error(result.message || "Failed to send message");
-      }
+      
+      setFormData({ name: "", email: "", message: "" });
     } catch (error) {
       toast({
         title: "Error",
