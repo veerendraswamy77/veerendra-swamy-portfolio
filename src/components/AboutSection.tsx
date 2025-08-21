@@ -56,17 +56,11 @@ export function AboutSection() {
               </Card>
 
               {/* Quick Stats */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="flex justify-center">
                 <Card className="bg-gradient-primary text-primary-foreground">
                   <CardContent className="p-6 text-center">
                     <div className="text-3xl font-bold mb-2">9.23</div>
                     <div className="text-sm opacity-90">CGPA</div>
-                  </CardContent>
-                </Card>
-                <Card className="bg-gradient-secondary text-secondary-foreground">
-                  <CardContent className="p-6 text-center">
-                    <div className="text-3xl font-bold mb-2">3+</div>
-                    <div className="text-sm opacity-90">Years Experience</div>
                   </CardContent>
                 </Card>
               </div>

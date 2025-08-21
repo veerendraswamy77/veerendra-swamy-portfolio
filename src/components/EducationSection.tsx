@@ -159,7 +159,7 @@ export function EducationSection() {
                     <div className="text-sm opacity-90">Current CGPA</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold mb-1">2024</div>
+                    <div className="text-3xl font-bold mb-1">2026</div>
                     <div className="text-sm opacity-90">Expected Graduation</div>
                   </div>
                   <div className="text-center">
