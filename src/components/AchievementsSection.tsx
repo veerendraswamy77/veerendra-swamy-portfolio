@@ -11,15 +11,6 @@ const achievements = [
     color: "primary",
     category: "Competition",
     skills: ["Competitive Programming", "Problem Solving", "Time Management"]
-  },
-  {
-    title: "Top 2 Position",
-    subtitle: "College Ideathon",
-    description: "Achieved 2nd place in college ideathon competition, demonstrating creativity, innovation, and presentation skills in developing breakthrough ideas.",
-    icon: Award,
-    color: "secondary",
-    category: "Innovation",
-    skills: ["Creative Thinking", "Innovation", "Presentation", "Team Collaboration"]
   }
 ];
 
@@ -126,21 +117,21 @@ export function AchievementsSection() {
             </Card>
           </div>
 
-            {/* Achievement Stats */}
+          {/* Achievement Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <Card className="bg-gradient-primary text-primary-foreground">
               <CardContent className="p-6 text-center">
                 <Award className="w-8 h-8 mx-auto mb-2" />
-                <div className="text-2xl font-bold mb-1">2</div>
-                <div className="text-sm opacity-90">Competition Awards</div>
+                <div className="text-2xl font-bold mb-1">1</div>
+                <div className="text-sm opacity-90">Competition Award</div>
               </CardContent>
             </Card>
             
             <Card className="bg-gradient-secondary text-secondary-foreground">
               <CardContent className="p-6 text-center">
                 <Trophy className="w-8 h-8 mx-auto mb-2" />
-                <div className="text-2xl font-bold mb-1">Top 2</div>
-                <div className="text-sm opacity-90">Best Rank</div>
+                <div className="text-2xl font-bold mb-1">Top 5</div>
+                <div className="text-sm opacity-90">Hackfest Rank</div>
               </CardContent>
             </Card>
             
