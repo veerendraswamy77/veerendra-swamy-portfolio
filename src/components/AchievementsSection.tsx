@@ -147,7 +147,7 @@ export function AchievementsSection() {
             <Card className="bg-gradient-primary text-primary-foreground">
               <CardContent className="p-6 text-center">
                 <Code className="w-8 h-8 mx-auto mb-2" />
-                <div className="text-2xl font-bold mb-1">2+</div>
+                <div className="text-2xl font-bold mb-1">10+</div>
                 <div className="text-sm opacity-90">Major Projects</div>
               </CardContent>
             </Card>

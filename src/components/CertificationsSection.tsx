@@ -14,7 +14,8 @@ const certifications = [
     color: "primary",
     skills: ["Generative AI", "Cloud Computing", "Google Cloud Platform", "AI/ML"],
     status: "Completed",
-    year: "2024"
+    year: "2024",
+    link: "/google-cloud-launchpad.pdf"
   },
   {
     title: "EZ Training Completion Certificate", 
@@ -25,7 +26,8 @@ const certifications = [
     color: "secondary",
     skills: ["Professional Development", "Training", "Skill Enhancement"],
     status: "Completed",
-    year: "2024"
+    year: "2024",
+    link: "/ez-training.pdf"
   },
   {
     title: "Cloud Practitioner",
@@ -36,7 +38,8 @@ const certifications = [
     color: "primary", 
     skills: ["Cloud Computing", "Infrastructure", "Best Practices", "Architecture"],
     status: "Completed",
-    year: "2024"
+    year: "2024",
+    link: "/cloud-practitioner.pdf"
   }
 ];
 
@@ -132,6 +135,7 @@ export function CertificationsSection() {
                         variant="ghost" 
                         size="sm"
                         className="p-2 hover:bg-accent group-hover:text-primary"
+                        onClick={() => window.open(cert.link, '_blank')}
                       >
                         <ExternalLink className="w-4 h-4" />
                       </Button>
@@ -141,7 +145,10 @@ export function CertificationsSection() {
                   {/* Hover Overlay */}
                   {hoveredCard === index && (
                     <div className="absolute inset-0 bg-gradient-primary/5 backdrop-blur-sm flex items-center justify-center animate-fade-in">
-                      <Button className="bg-white/20 backdrop-blur-sm border-white/30 text-foreground hover:bg-white/30">
+                      <Button 
+                        className="bg-white/20 backdrop-blur-sm border-white/30 text-foreground hover:bg-white/30"
+                        onClick={() => window.open(certifications[index].link, '_blank')}
+                      >
                         View Certificate
                         <ChevronRight className="ml-2 w-4 h-4" />
                       </Button>
