@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import profilePhoto from "@/assets/profile-photo.jpg";
+const profilePhoto = "/lovable-uploads/0fba2849-d615-4ece-ae99-c7e5d73f97c1.png";
 
 export function AboutSection() {
   return (
