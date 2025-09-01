@@ -2,59 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Portfolio Design System for S Veerendra Swamy
-   Modern, professional color palette with Deep Blue, Cyan, and clean neutrals
-   All colors are HSL for consistent theming
+/* Futuristic Portfolio Design System - Sleek & Modern
+   Color Palette: Midnight Purple, Electric Blue, Neon Pink/Aqua
+   Features: Glassmorphism, glowing effects, smooth animations
 */
 
 @layer base {
   :root {
-    /* Core Brand Colors */
-    --background: 210 20% 98%;
-    --foreground: 224 76% 15%;
+    /* Core Brand Colors - Futuristic Palette */
+    --background: 240 100% 99%;        /* Off-White (#FDFDFE) */
+    --foreground: 248 35% 15%;         /* Dark text for contrast */
     
-    /* Brand Identity */
-    --primary: 224 76% 32%;        /* Deep Blue */
-    --primary-foreground: 210 20% 98%;
-    --primary-glow: 224 76% 45%;   /* Lighter blue for glows */
+    /* Primary: Midnight Purple */
+    --primary: 248 35% 18%;            /* Midnight Purple (#1E1E3F) */
+    --primary-foreground: 240 100% 99%;
+    --primary-glow: 248 35% 35%;       /* Lighter purple for glows */
     
-    --secondary: 188 94% 43%;       /* Cyan/Teal */
-    --secondary-foreground: 210 20% 98%;
-    --secondary-glow: 188 94% 55%;  /* Lighter cyan */
+    /* Accent: Electric Blue */
+    --secondary: 217 91% 60%;          /* Electric Blue (#3B82F6) */
+    --secondary-foreground: 240 100% 99%;
+    --secondary-glow: 217 91% 75%;     /* Lighter blue for glows */
     
-    /* UI Colors */
-    --card: 0 0% 100%;
-    --card-foreground: 224 76% 15%;
+    /* Tertiary: Neon Pink */
+    --accent: 323 77% 70%;             /* Neon Pink (#F472B6) */
+    --accent-foreground: 248 35% 18%;
+    --accent-glow: 323 77% 85%;        /* Lighter pink */
     
-    --popover: 0 0% 100%;
-    --popover-foreground: 224 76% 15%;
+    /* Alternative: Aqua */
+    --aqua: 167 89% 52%;               /* Aqua (#14F4C5) */
+    --aqua-glow: 167 89% 70%;          /* Lighter aqua */
     
-    --muted: 210 20% 96%;
-    --muted-foreground: 215 16% 47%;
+    /* UI Colors - Glassmorphism Ready */
+    --card: 240 100% 99% / 0.8;        /* Semi-transparent for glass effect */
+    --card-foreground: 248 35% 15%;
+    --card-border: 248 35% 18% / 0.1;  /* Subtle border */
     
-    --accent: 210 20% 95%;
-    --accent-foreground: 224 76% 32%;
+    --popover: 240 100% 99% / 0.95;
+    --popover-foreground: 248 35% 15%;
+    
+    --muted: 248 35% 95%;
+    --muted-foreground: 248 25% 45%;
     
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 20% 98%;
+    --destructive-foreground: 240 100% 99%;
     
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 224 76% 32%;
+    --border: 248 35% 18% / 0.08;      /* Ultra subtle borders */
+    --input: 248 35% 95%;
+    --ring: 217 91% 60%;               /* Electric blue focus ring */
     
     /* Design System Tokens */
-    --radius: 0.75rem;
+    --radius: 1.5rem;                  /* 2xl rounded corners */
     
-    /* Custom Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-glow)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+    /* Futuristic Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--secondary-glow)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 50%, hsl(var(--accent)) 100%);
+    --gradient-glass: linear-gradient(145deg, hsl(var(--background) / 0.1) 0%, hsl(var(--background) / 0.05) 100%);
+    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(var(--secondary) / 0.3) 0%, transparent 70%);
     
-    /* Shadows */
-    --shadow-soft: 0 4px 20px -2px hsl(var(--primary) / 0.1);
-    --shadow-glow: 0 8px 32px -8px hsl(var(--primary) / 0.3);
-    --shadow-card: 0 2px 8px -2px hsl(var(--primary) / 0.08);
+    /* Glassmorphism & Glow Effects */
+    --glass-bg: hsla(var(--background) / 0.1);
+    --glass-border: hsla(var(--primary) / 0.15);
+    --glow-primary: 0 0 40px hsl(var(--primary) / 0.4);
+    --glow-secondary: 0 0 40px hsl(var(--secondary) / 0.4);
+    --glow-accent: 0 0 40px hsl(var(--accent) / 0.4);
+    
+    /* Enhanced Shadows */
+    --shadow-soft: 0 8px 32px -8px hsl(var(--primary) / 0.1);
+    --shadow-glow: 0 20px 60px -10px hsl(var(--secondary) / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(var(--primary) / 0.08);
+    --shadow-glass: 0 8px 32px -8px hsl(var(--primary) / 0.1), inset 0 1px 0 hsl(var(--background) / 0.2);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -72,45 +89,66 @@
   }
 
   .dark {
-    /* Dark Mode Colors */
-    --background: 224 76% 4%;
-    --foreground: 210 20% 98%;
+    /* Dark Mode - Enhanced Midnight Theme */
+    --background: 248 35% 6%;          /* Very dark midnight */
+    --foreground: 240 100% 98%;
     
-    --primary: 224 76% 55%;
-    --primary-foreground: 224 76% 4%;
-    --primary-glow: 224 76% 65%;
+    /* Primary: Brighter Purple in dark */
+    --primary: 248 35% 25%;            /* Slightly lighter midnight purple */
+    --primary-foreground: 240 100% 98%;
+    --primary-glow: 248 35% 45%;       /* Much brighter glow */
     
-    --secondary: 188 94% 55%;
-    --secondary-foreground: 224 76% 4%;
-    --secondary-glow: 188 94% 65%;
+    /* Accent: Electric Blue (brighter in dark) */
+    --secondary: 217 91% 65%;          /* Brighter electric blue */
+    --secondary-foreground: 248 35% 6%;
+    --secondary-glow: 217 91% 80%;     /* Very bright blue glow */
     
-    --card: 224 76% 8%;
-    --card-foreground: 210 20% 98%;
+    /* Tertiary: Neon Pink (more vibrant) */
+    --accent: 323 77% 75%;             /* Brighter neon pink */
+    --accent-foreground: 248 35% 6%;
+    --accent-glow: 323 77% 90%;        /* Very bright pink glow */
     
-    --popover: 224 76% 8%;
-    --popover-foreground: 210 20% 98%;
+    /* Alternative: Aqua (enhanced) */
+    --aqua: 167 89% 60%;               /* Brighter aqua */
+    --aqua-glow: 167 89% 80%;          /* Bright aqua glow */
     
-    --muted: 224 76% 12%;
-    --muted-foreground: 215 20% 65%;
+    /* UI Colors - Dark Glassmorphism */
+    --card: 248 35% 8% / 0.8;          /* Dark glass effect */
+    --card-foreground: 240 100% 98%;
+    --card-border: 248 35% 25% / 0.2;  /* Glowing borders */
     
-    --accent: 224 76% 15%;
-    --accent-foreground: 210 20% 98%;
+    --popover: 248 35% 8% / 0.95;
+    --popover-foreground: 240 100% 98%;
     
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 20% 98%;
+    --muted: 248 35% 12%;
+    --muted-foreground: 248 25% 65%;
     
-    --border: 224 76% 15%;
-    --input: 224 76% 15%;
-    --ring: 224 76% 55%;
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 240 100% 98%;
     
-    /* Dark Mode Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+    --border: 248 35% 25% / 0.15;      /* Glowing subtle borders */
+    --input: 248 35% 12%;
+    --ring: 217 91% 65%;               /* Bright focus ring */
     
-    /* Dark Mode Shadows */
-    --shadow-soft: 0 4px 20px -2px hsl(0 0% 0% / 0.3);
-    --shadow-glow: 0 8px 32px -8px hsl(var(--primary) / 0.4);
-    --shadow-card: 0 2px 8px -2px hsl(0 0% 0% / 0.2);
+    /* Dark Mode Futuristic Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--secondary-glow)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 50%, hsl(var(--accent)) 100%);
+    --gradient-glass: linear-gradient(145deg, hsl(var(--background) / 0.2) 0%, hsl(var(--background) / 0.1) 100%);
+    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(var(--secondary) / 0.4) 0%, transparent 70%);
+    
+    /* Enhanced Dark Glassmorphism */
+    --glass-bg: hsla(var(--background) / 0.2);
+    --glass-border: hsla(var(--primary-glow) / 0.3);
+    --glow-primary: 0 0 60px hsl(var(--primary-glow) / 0.6);
+    --glow-secondary: 0 0 60px hsl(var(--secondary) / 0.6);
+    --glow-accent: 0 0 60px hsl(var(--accent) / 0.6);
+    
+    /* Enhanced Dark Shadows & Glows */
+    --shadow-soft: 0 8px 32px -8px hsl(0 0% 0% / 0.4);
+    --shadow-glow: 0 20px 60px -10px hsl(var(--secondary) / 0.4);
+    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+    --shadow-glass: 0 8px 32px -8px hsl(0 0% 0% / 0.3), inset 0 1px 0 hsl(var(--primary-glow) / 0.1);
     
     /* Dark Sidebar */
     --sidebar-background: 240 5.9% 10%;
@@ -130,10 +168,47 @@
   }
 
   body {
-    @apply bg-background text-foreground font-['Poppins',sans-serif] antialiased;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', 'system-ui', sans-serif; /* Body text: Inter for readability */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', 'system-ui', sans-serif; /* Headings: Poppins for impact */
+    font-weight: 700; /* Bold headings */
   }
 
   html {
     scroll-behavior: smooth;
+  }
+
+  /* Glassmorphism utilities */
+  .glass {
+    @apply backdrop-blur-xl bg-glass-bg border border-glass-border;
+  }
+  
+  .glass-card {
+    @apply backdrop-blur-xl bg-card/80 border border-card-border shadow-glass rounded-2xl;
+  }
+  
+  /* Glow effects */
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+  
+  .glow-secondary {
+    box-shadow: var(--glow-secondary);
+  }
+  
+  .glow-accent {
+    box-shadow: var(--glow-accent);
+  }
+  
+  /* Hover animations */
+  .hover-lift {
+    @apply transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-glow;
+  }
+  
+  .hover-glow {
+    @apply transition-all duration-300 ease-out hover:glow-secondary;
   }
 }
