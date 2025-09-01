@@ -135,7 +135,14 @@ export function CertificationsSection() {
                         variant="ghost" 
                         size="sm"
                         className="p-2 hover:bg-accent group-hover:text-primary"
-                        onClick={() => window.open(cert.link, '_blank')}
+                        onClick={() => {
+                          const link = document.createElement('a');
+                          link.href = cert.link;
+                          link.download = `${cert.title.replace(/\s+/g, '_')}.pdf`;
+                          document.body.appendChild(link);
+                          link.click();
+                          document.body.removeChild(link);
+                        }}
                       >
                         <ExternalLink className="w-4 h-4" />
                       </Button>
@@ -147,9 +154,16 @@ export function CertificationsSection() {
                     <div className="absolute inset-0 bg-gradient-primary/5 backdrop-blur-sm flex items-center justify-center animate-fade-in">
                       <Button 
                         className="bg-white/20 backdrop-blur-sm border-white/30 text-foreground hover:bg-white/30"
-                        onClick={() => window.open(certifications[index].link, '_blank')}
+                        onClick={() => {
+                          const link = document.createElement('a');
+                          link.href = certifications[index].link;
+                          link.download = `${certifications[index].title.replace(/\s+/g, '_')}.pdf`;
+                          document.body.appendChild(link);
+                          link.click();
+                          document.body.removeChild(link);
+                        }}
                       >
-                        View Certificate
+                        Download Certificate
                         <ChevronRight className="ml-2 w-4 h-4" />
                       </Button>
                     </div>

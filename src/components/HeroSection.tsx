@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Download, MessageCircle, ChevronDown } from "lucide-react";
-import profilePhoto from "@/assets/profile-photo.jpg";
+const profilePhoto = "/lovable-uploads/0fba2849-d615-4ece-ae99-c7e5d73f97c1.png";
 
 export function HeroSection() {
   const scrollToContact = () => {
