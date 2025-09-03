@@ -43,28 +43,21 @@ export function HeroSection() {
       {/* Content with Enhanced Visibility */}
       <div className="relative z-20 container mx-auto px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
-          {/* Enhanced Profile Image */}
+          {/* Improved Profile Image - high contrast */}
           <div className="mb-12 flex justify-center">
-            <div className="relative group">
-              {/* Outer Glow Ring */}
-              <div className="absolute -inset-4 bg-gradient-primary rounded-full opacity-30 animate-pulse-glow"></div>
-              
-              {/* Main Image Container */}
-              <div className="relative glass-card w-44 h-44 p-3 hover-lift hover-glow shadow-glow">
-                <div className="w-full h-full rounded-2xl overflow-hidden ring-2 ring-primary-glow/50">
-                  <img 
-                    src={profilePhoto} 
-                    alt="S Veerendra Swamy - AI/ML Engineer"
-                    className="w-full h-full object-cover object-center group-hover:scale-110 transition-all duration-500 filter brightness-105 contrast-105"
-                  />
-                </div>
-                {/* Subtle Inner Glow */}
-                <div className="absolute inset-3 rounded-2xl bg-gradient-secondary/10 pointer-events-none"></div>
+            <div className="relative">
+              {/* Halo glow */}
+              <div className="absolute -inset-8 rounded-full bg-gradient-secondary opacity-30 blur-xl"></div>
+              {/* Solid backdrop for clarity */}
+              <div className="absolute -inset-4 rounded-full bg-background/70 backdrop-blur-xl shadow-glass"></div>
+              {/* Photo */}
+              <div className="relative w-48 h-48 md:w-60 md:h-60 rounded-full overflow-hidden ring-4 ring-secondary shadow-glow hover-lift">
+                <img 
+                  src={profilePhoto} 
+                  alt="S Veerendra Swamy - AI/ML Engineer"
+                  className="w-full h-full object-cover object-center"
+                />
               </div>
-              
-              {/* Additional Decorative Elements */}
-              <div className="absolute -top-2 -right-2 w-6 h-6 bg-accent rounded-full animate-bounce glow-accent" style={{ animationDelay: '0.5s' }}></div>
-              <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-secondary rounded-full animate-float glow-secondary" style={{ animationDelay: '1.5s' }}></div>
             </div>
           </div>
 
