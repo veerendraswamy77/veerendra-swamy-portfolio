@@ -183,7 +183,7 @@
 
   /* Glassmorphism utilities */
   .glass {
-    @apply backdrop-blur-xl bg-glass-bg border border-glass-border;
+    @apply backdrop-blur-xl bg-glass border border-glass;
   }
   
   .glass-card {
