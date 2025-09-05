@@ -27,22 +27,41 @@ export function HeroSection() {
           {/* Left Content */}
           <div className="text-left order-2 lg:order-1">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              Hi, I'm Veeraj Swamy
+              Hi, I'm S Veerendra Swamy
             </h1>
             
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 max-w-2xl">
-              Recent Computer Science graduate with expertise in Java, Python, and web technologies. 
-              Developed innovative solutions using various technologies. Eager to contribute to forward-thinking 
-              organizations and grow professionally in software development.
+            <p className="text-xl md:text-2xl text-gray-300 mb-4 font-medium">
+              Aspiring AI & ML Engineer
             </p>
             
-            <Button
-              size="lg"
-              onClick={downloadResume}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 text-lg rounded-full transition-all duration-300"
-            >
-              Check Resume
-            </Button>
+            <p className="text-lg md:text-xl text-gray-300 mb-6">
+              Software Developer & Product Designer
+            </p>
+            
+            <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-8 max-w-2xl">
+              Transforming ideas into innovative solutions through clean design, efficient code, and cutting-edge AI/ML technologies.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button
+                size="lg"
+                onClick={downloadResume}
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 text-lg rounded-full transition-all duration-300"
+              >
+                <Download className="mr-3 h-5 w-5" />
+                Download Resume
+              </Button>
+              
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={scrollToContact}
+                className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-semibold px-8 py-4 text-lg rounded-full transition-all duration-300"
+              >
+                <MessageCircle className="mr-3 h-5 w-5" />
+                Let's Connect
+              </Button>
+            </div>
           </div>
 
           {/* Right Content - Profile Image */}
